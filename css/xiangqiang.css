@@ -1,0 +1,137 @@
+/*头部开始*/
+/*头部开始*/
+/*底部开始*/
+.dis_footer{
+    margin-top: 36px;
+    border-bottom: 1px solid #ccc;
+}
+.dis_footer .top{
+    height: 32px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.dis_footer .top .public{
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.dis_footer .top .link1,.dis_footer .top .link2{
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.dis_footer .bottom{
+    height: 60px;
+    text-align: center;
+    padding-top:15px;
+    box-sizing: border-box;
+}
+.dis_footer .bottom .color{
+    color: red;
+}
+.dis_footer .bottom .gray{
+    /*color: #EFEFEF;*/
+}
+.my_xz::before{
+    height: 15px;
+    width: 15px;
+    content:'';
+    background: url(../img/top_10.png);
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+.dis_footer .top .link3 a{
+    position: relative;
+}
+
+/*内容开始*/
+.xq_content{
+    padding: 20px 10px 0 10px;
+}
+.xq_content .price{
+    color: #FF6D19;
+    font-size: 18px;
+}
+.xq_content h2{
+    font-size: 18px;
+}
+.xq_content .main{
+    margin-top: 15px;
+
+}
+.xq_content .content .jieshao{
+    margin-top: 20px;
+    margin-bottom: 12px;
+    /*把文字打断*/
+    word-break: break-all;
+
+}
+.xq_content .detail_js{
+    margin-bottom: 45px;
+}
+.xq_content .detail_js .cha{
+    padding-top: 50px;
+}
+.xq_content .buy{
+    height: 30px;
+    background-color: #FF9102;
+    line-height: 30px;
+    text-align: center;
+}
+.xq_content .buy a{
+    color: #fff;
+
+}
+.xq_content .erweima{
+    margin-top: 45px;
+    /*height: 135px;*/
+}
+.xq_content .erweima img{
+    height: 100%;
+}
+.xq_content .tit{
+    height: 60px;
+    line-height: 60px;
+}
+.xq_content .form{
+    border: 1px solid #ccc;
+    height: 115px;
+    overflow: hidden;
+}
+.xq_content .form textarea{
+    height: 76px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.xq_content .ctrl .tjdp{
+    width: 100px;
+    height: 38px;
+    background-color: #FF851F;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    float: right;
+    margin-top: -4px;
+    /*margin-bottom: 0;*/
+}
+.xq_content .list ul{
+    margin-bottom: 25px;
+}
+.xq_content .list ul .time{
+    float: right;
+}
+.xq_content .list ul .userimg{
+    float: left;
+}
+
+.xq_content .list .username{
+    color: #5A98C0;
+    margin-left: 10px;
+}
+.xq_content .list .content{
+    margin-left: 50px;
+    margin-top: -22px;
+}

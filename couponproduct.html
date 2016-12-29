@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>couponproduct</title>
+	<link rel="stylesheet" href="css/base1.css">
+	<link rel="stylesheet" href="css/yh_common.css">
+	<link rel="stylesheet" href="css/couponproduct.css">
+	<script src='js/template-native.js'></script>
+	<script src='js/zepto.min.js'></script>
+	<script type="text/html" id='tpl'>
+		<%for(var i=0;i<data.length;i++){ %>
+			<div class="product_item clearfix iconfont product_icon my_centerY">
+				<a href="javascript:;">
+					<div class="pic fl" data-id="<%= data[i].couponProductId %>">
+						<%=# data[i].couponProductImg %>
+					</div>
+					<div class="info">
+						<div class="title">
+							<h3><%= data[i].couponProductName %></h3>
+							<h2><%= data[i].couponProductPrice %></h2>
+						</div>
+						<div class="time">
+							<%= data[i].couponProductTime %>
+						</div>
+					</div>
+				</a>	
+			</div>
+		<%} %>
+	</script>
+	<script type='text.html' id='tp2'>
+		<ul>
+			<%for(var i=0;i<data.length;i++){%>
+				<li>
+					<%=# data[i].couponProductImg %>
+				</li>
+			<%}%>
+		</ul>
+	</script>
+	<script src='js/yh_common.js'></script>
+	<script src='js/couponproduct.js'></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<header class='yh_header'>
+		<a href="coupon.html" class="iconfont back_icon fl my_element my_center"></a>
+		<a href="#"><div class="app_download fr"></div></a>
+		<h1>优惠券</h1>
+	</header>
+	<!-- tips -->
+	<section class="tips">
+		<p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+	</section>
+	<!-- 内容主体 -->
+	<section class="content">
+		<div class="content_wrap">
+			<!-- <div class="product_item clearfix iconfont product_icon my_centerY">
+				<a href="#">
+					<div class="pic fl">
+						<img src="img/kfc-5ikfc-111_p18.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="title">
+							<h3>C16  两人小食组 新奥尔良烤翅2块+劲爆鸡米花(小)+红豆派1个+葡式蛋挞(经典) 2016年11月凭肯德基优惠券</h3>
+							<h2><em>¥</em>25</h2>
+						</div>
+						<div class="time">
+							有效期至11月30日
+						</div>
+					</div>
+				</a>	
+			</div> -->
+		</div>
+	</section>
+	<!-- 底部优惠标题 -->
+	<section class="yh_bottom">
+		<div class="bottom_wrap">
+			<a href="index.html">首页</a>
+			<span>></span>
+			<a href="coupon.html">优惠券</a>
+			<span>></span>
+			<a href="#" class="tit">肯德基优惠券</a>
+		</div>
+	</section>
+	<!-- footer -->
+	<section class="footer">
+		<div class="footer_t clearfix">
+			<a href="javascript:;" class="w33 fl">登录</a>
+			<a href="#" class="w33 fl">注册</a>
+			<a href="#" class="w33 fl">
+				<img src="img/top.jpg" alt="">
+				返回顶部
+			</a>
+		</div>
+		<div class="footer_b">
+			<p>
+				<a href="#">手机APP下载</a>
+				<a href="#">慢慢买手机版</a>
+				--- 掌上比价平台
+			</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</section>
+	<!-- 模态框 -->
+	<section class="prop_screen dn">
+		<div class="prop_info my__centerY">
+			<div class="pic_info">
+		
+			</div>
+			<a href="javascript:;" class="left"><</a>
+			<a href="javascript:;" class="right">></a>
+		</div>
+	</section>
+</body>
+</html>

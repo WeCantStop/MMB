@@ -1,0 +1,58 @@
+
+
+
+/*中部内容*/
+
+.all .product_nav ul{
+    border: 1px solid #cccccc;
+    border-bottom: none;
+}
+.all .product_nav li{
+    height: 60px;
+    padding-top: 10px;
+    /*text-indent: 15px;*/
+    border-bottom: 1px solid #cccccc;
+    background-color: #ffffff;
+    color: #000;
+    box-sizing: border-box;
+}
+
+
+
+
+.all .product_tv li{
+    padding-left: 40px;
+    position: relative;
+
+}
+
+.all .product_tv p{
+    font-size: 16px;
+}
+.all .product_tv i{
+    height: 20px;
+    width: 20px;
+    background: url("../img/images/rarrow.png") no-repeat;
+    position: absolute;
+    right:0;
+    top: 20px;
+}
+
+
+ .product_tv span:nth-child(2){
+    color: #999;
+}
+
+.product_tv span:nth-child(3){
+
+    height:20px;
+    width: 20px;
+    background-color: #c9c9c9;
+    position: absolute;
+    left: 7px;
+    top:15px;
+    line-height: 20px;
+    text-align: center;
+}
+
+

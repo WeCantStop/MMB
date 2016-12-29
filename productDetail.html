@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 让IE用最新的内核去渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口标签 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>慢慢买</title>
+    <!-- Bootstrap -->
+    <!-- bootstrap的核心css文件 -->
+
+
+    <link rel="stylesheet" href="css/commenQ.css">
+    <link rel="stylesheet" href="css/baseq.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/template-native.js"></script>
+</head>
+<body>
+<div class="all">
+    <!--通用头部区域-->
+
+    <div class="top_header">
+        <div class="left fl"></div>
+        <div class="right fr"></div>
+    </div>
+    <div class="btm_header">
+        <div class="r-button fr ">
+            <input class="button my__centerY " type="button" value="搜索">
+        </div>
+        <div class="l-select ">
+            <input class="select  " type="text" placeholder="请输入你想比价的商品">
+        </div>
+    </div>
+    <div class="pathname">
+        <span><a href="index.html">首页></a> </span> <span><a class='replace' href="brandTitle.html">全部分类 ></a></span><span id="get_url">最新评论</span>
+    </div>
+
+    <div class="mid-list">
+        <p><span id="get_urltwo"></span>最新评论</p>
+    </div>
+
+    <!--中间内容-->
+    <section class="product_nav">
+        <ul class="product_tv clearfix">
+
+
+        </ul>
+    </section>
+
+
+    <!--底部-->
+    <section class='dis_footer'>
+        <div class="top">
+            <div class="link1 fl w30 public"><a href="#">登录</a></div>
+            <div class="link2 fl w30 public"><a href="#">注册</a></div>
+            <div class="link3 fr w40 public"><a href="#">点击返回顶部</a></div>
+        </div>
+        <div class="bottom">
+            <p class="t"><span class='color'>手机APP下载</span> 慢慢买2手机版<span class='gray'>--掌上比价平台</span></p>
+            <p class="b"><span class='gray'>m.manmanbuy.com</span></p>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<script>
+
+    var changeHref;
+    function getWay(location){
+        var arr=location.split(':');
+        return arr[1];
+    }
+    if(getWay(location.href)=='//localhost'){
+        changeHref='192.168.50.130:8002';
+    }else{
+        changeHref='mmb.ittun.com';
+    }
+    function getUrl(url) {
+        var obj = {};
+        //var url=location.search;
+        var string = url.split('?')[1];
+//        console.log(string);
+        string.split('&').forEach(function (ele) {
+            //结果是一个个的  中间是什么符号就用什么符号给分割开
+            //console.log(ele);
+            var b = ele.split('+');
+            obj[b[0]] = b[1] ? b[1] : '';
+        })
+        return obj;
+    }
+
+
+    var id = getUrl(location.href).id;
+    console.log(id);
+    var id_con = getUrl(decodeURI(location.href)).id2;
+
+    var id_cao = getUrl(decodeURI(location.href)).id3;
+    //id_cao=id_cao.split('#')[0]
+    console.log(id_cao);
+    var r_part = document.getElementById("#r_part");
+
+    $.ajax({
+        type: 'get',
+        url: 'http://'+changeHref+'/api/getproductcom?productid=' + id,
+
+        success: function (data) {
+            var tmpl = template('tele', {array: data.result});
+            $('.product_tv').append(tmpl);
+            $('.r-part').html(id_con);
+            $('.l-pic a').html(id_cao.split('#')[0]);
+
+        }
+    })
+
+    //进行相关替换
+    var content=location.hash.split('#')[1];
+    document.querySelector('.replace').innerHTML=content+" >";
+    $('.replace').on('click',function(){
+        history.back();
+    })
+
+</script>
+
+
+<script type="text/template" id="tele">
+    <li>
+        <% for (var i = 0; i < array.length; i++) { %>
+        <div class="l-pic fl">
+            <a href="#">
+            </a>
+        </div>
+        <div class="r-part ">
+
+        </div>
+        <div class="foot-con ">
+            <a href="javascript:;">
+
+                <p class="txt_cut lit-square"><%= array[i].productName%></p>
+
+                <span class="fl"><%= array[i].comName%>&nbsp;:</span>
+                <img class="w25 fl ml_5 mt_2" src="img/images/star%202.png" alt="">
+                <span class="fr mr_10"><%= array[i].comTime%></span>
+
+                <div class="com-content mr_5">
+                    <p><%= array[i].comContent%></p>
+                </div>
+            </a>
+        </div>
+
+
+    </li>
+    <%  } %>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.my_arrow::before{
+    content:'';
+    width: 10px;
+    height: 17px;
+    left:10px;
+    background: url(../img/leftArray_03.png);
+
+}
+.download1::before{
+    content: '';
+    width: 35px;
+    height: 38px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: url('../img/xzlogo_03.png');
+
+}
+.dis_header{
+    height: 50px;
+    background-color: #FF851F;
+    /*position: relative;*/
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    color: #fff;
+    padding: 0 10px;
+
+}
+.dis_header .container{
+    position: relative;
+    width: 60px;
+    height: 50px;
+}
+.dis_header .title{
+    margin-left: 60px;
+    margin-right: 60px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.dis_header .download{
+    /*height: 50px;*/
+    width: 60px;
+    position: relative;
+
+
+}
+
+.dis_header .download div:nth-child(2){
+    position: relative;
+    margin-top: 14px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+/*Í·²¿*/
+.nav_head{
+    height: 50px;
+    background-color: #ff841d;
+    line-height: 50px;
+    text-align: center;
+    font-size : 18px;
+    font-weight: 400;
+    color:#fff;
+    position: relative;
+}
+.nav_head:before {
+    content: '';
+    width: 10px;
+    height: 17px;
+    background: url(../img/leftArray_03.png) no-repeat;
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.nav_head:after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background:url(../img/header_app.png);
+    background-size: 30px 30px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right:5px;
+}
+.red{
+    color:#ff6c00
+}
+.black{
+    color:black;
+}

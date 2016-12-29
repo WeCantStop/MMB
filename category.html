@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>全网比价</title>
+	<link rel="stylesheet" href="css/base1.css">
+	<link rel="stylesheet" href="css/yh_common.css">
+	<link rel="stylesheet" href="css/category.css">
+	<script src="js/zepto.min.js"></script>
+	<script src="js/template-native.js"></script>
+	<script type='text/html' id='tpl'>
+		<%for(var i=0;i<data.length;i++){%>
+	        <div class="product_item">
+		        <a href='#' class="product_title"><%= data[i].title %></a>
+		        <div class='product_list_wrap dn'>
+		            <ul class="product_list clearfix"></ul>
+		        </div>
+		    </div>
+	    <%}%>
+	</script>
+	<script type='text/html' id='tp2'>
+	  	<% for(var i=0;i<data.length;i++){%>
+	         <li class="w33 fl">
+	         	<a href="productList.html?categoryid=<%= data[i].categoryId %>&pageid=1&category=<%=data[i].category%>">
+	         		<%=data[i].category%>
+	         	</a>
+	         </li>
+	   <%}%>
+	</script>
+	<script src='js/category.js'></script>
+</head>
+<body>
+	<!--头部-->
+    <header class="MMB_header clearfix">
+        <div class="MMB_logo fl">
+            <a href="index.html"><img src="img/header_logo.png"></a>
+        </div>
+        <div class="APP_download fr">
+            <a href="#"><img src="img/header_app.png"></a>
+        </div>
+    </header>
+
+    <!--search栏(右边定位固定，左边自适应)-->
+    <section class="top_search">
+            <input type="submit" value="搜索" id="search_btn">
+            <input type="search" id="search_text" placeholder="请输入你想比价的商品">
+    </section>
+	
+	<!-- 主体 -->
+	<section class='content'>
+		<div class="content_wrap">
+			<!-- <div class="product_item">
+		        <a href='#' class="product_title">大家电</a>
+		        <div class='product_list_wrap dn'>
+		            <ul class="product_list clearfix">
+		            	<li class="w33 fl">hehe</li>
+		            </ul>
+		        </div>
+		    </div> -->
+		</div> 
+	</section>
+
+
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer_t clearfix">
+			<a href="javascript:;" class="w33 fl">登录</a>
+			<a href="javascript:;" class="w33 fl">注册</a>
+			<a href="index.html" class="w33 fl">
+				<img src="img/top.jpg" alt="">
+				返回首页
+			</a>
+		</div>
+		<div class="footer_b">
+			<p>
+				<a href="#">手机APP下载</a>
+				<a href="#">慢慢买手机版</a>
+				--- 掌上比价平台
+			</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+</body>
+</html>

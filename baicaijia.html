@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慢慢买-白菜价</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base2.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+    <script src="js/template-native.js"></script>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body>
+<!--头部-->
+    <header class="baicai clearfix">
+        <a href="index.html"> <div class="header_left my_center fl"></div></a>
+        <div class="header_right fr"></div>
+        <div class="header_center">
+            <h2>全部 - 白菜价</h2>
+        </div>
+    </header>
+
+<!--头部nav-->
+    <section class="top_nav translationAll">
+        <div class="nav_right fr"></div>
+        <div class="nav_left">
+            <ul class="nav_wrap">
+
+            </ul>
+        </div>
+        <div class="search_wrap">
+            <input type="search" class="baicai_search" placeholder='请输入搜索关键字'>
+            <input type="button" class="baicai_search_btn fr" value="搜索">
+        </div>
+    </section>
+
+<!--产品列表-->
+    <section class="pro_item">
+        <ul class="pro_ul_wrap">
+        </ul>
+    </section>
+
+<!--底部-->
+    <section class='dis_footer'>
+        <div class="top">
+            <div class="link1 fl w30 public"><a href="javascript:;">登录</a></div>
+            <div class="link2 fl w30 public"><a href="javascript:;">注册</a></div>
+            <div class="link3 fr w40 public"><a href="#">点击返回顶部</a></div>
+        </div>
+        <div class="bottom">
+            <p class="t"><span class='color'>手机APP下载</span> 慢慢买2手机版<span class='gray'>--掌上比价平台</span></p>
+            <p class="b"><span class='gray'>m.manmanbuy.com</span></p>
+        </div>
+    </section>
+</body>
+
+<!--nav部分模板-->
+<script type="text/template" id='top_nav'>
+    <% for(var i = 0;i < item.length;i++){ %>
+        <li><a href="#" titleId="<%= item[i].titleId%>"><%= item[i].title %></a></li>
+    <% } %>
+</script>
+
+<!--产品部分模板-->
+<script type="text/template" id="pro_item">
+    <% for(var i = 0;i < item.length;i++){ %>
+        <li class="pro_item_wrap">
+            <div class="pro_left fl">
+                <a href="#">
+                    <%=# item[i].productImg %>
+                </a>
+            </div>
+            <div class="pro_right">
+                <h4 class="one_txt_cut"><%=# item[i].productName %></h4>
+                <div class="price"><%=# item[i].productPrice %></div>
+                <%=# item[i].productCouponRemain %>
+                <div class="youhuijuan clearfix">
+                    <%=# item[i].productCoupon %>
+                    <%=# item[i].productHref %>
+                </div>
+            </div>
+        </li>
+    <% } %>
+</script>
+
+<!--Ajax部分-->
+<script src="js/baicaijia.js"></script>
+
+</html>

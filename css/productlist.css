@@ -1,0 +1,121 @@
+/*
+* @Author: Admin
+* @Date:   2016-12-01 22:13:48
+* @Last Modified by:   Admin
+* @Last Modified time: 2016-12-03 18:54:30
+*/
+
+/*头部*/
+.MMB_header {
+    height: 50px;
+    background-color: #ff841d;
+}
+
+.MMB_logo {
+    padding: 14px 0 0 14px;
+    box-sizing: border-box;
+}
+
+.MMB_logo a{
+    width: 200px;
+    height: 36px;
+    display: block;
+}
+
+.APP_download {
+    padding: 6px;
+}
+
+.APP_download a{
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+/* 头部栏目 */
+.yh_bottom{
+	margin: 0;
+    background: -webkit-linear-gradient(top,#fff 20%,#E7E7E7 60%,#ccc);
+    position: relative;
+}
+.yh_bottom .check{
+	height: 30px;
+	padding: 0 20px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 30px;
+	background-color: #E4E4E4;
+	position: absolute;
+	right: 10px;
+	top: 3px;
+}
+
+/* 主体部分 */
+
+.product_item{
+	position: relative;
+	padding: 5px 0;
+}
+
+.content .pic{
+	padding-left: 10px;
+	overflow: hidden;
+}
+.content .pic img{
+	max-width: 100px;
+}
+.content .info{
+	padding: 0 15px 0 5px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.content .info .title{
+	line-height: 20px;
+	color: #333;
+}
+.content .info .price{
+	color:#e92322;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.content .info .evalute span{
+	margin-right: 10px;
+	color: #a1a1a1;
+	font-size: 12px;
+}
+
+
+
+/* 底部分页 */
+.productlist_bottom{
+	padding: 0;
+	margin: 0;
+    background: -webkit-linear-gradient(top,#fff,#ccc);
+}
+.productlist_bottom span{
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.productlist_bottom span a{
+	color: #000;
+	border-radius: 5px;
+	padding: 5px 15px;
+	background-color: #E4E4E4;
+}
+.productlist_bottom span:nth-child(2) a{
+	padding: 0;
+}
+.productlist_bottom span:nth-child(2) select{
+	border-radius: 5px;
+	padding: 5px 10px;
+	background-color: #e4e4e4;
+	border-style: none;
+	font-size: 16px;
+}
+/* footer */
+.footer{
+	margin: 0;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/yh_common.css">
+    <link rel="stylesheet" href="css/coupon.css">
+    <script src='js/template-native.js'></script>
+    <script src='js/zepto.min.js'></script>
+    <script type='text/html' id='tpl'>
+        <%for(var i=0;i<data.length;i++){%>
+        <div class="product_item w20 fl">
+            <a href="<%= data[i].couponLink %>?couponid=<%= data[i].couponId %>" class='my__center'>
+                <img src="<%= data[i].couponImg %>" alt="">
+                <%= data[i].couponTitle %>
+            </a>
+        </div>
+        <%}%>
+    </script>
+    <script src='js/coupon.js'></script>
+</head>
+<body>
+<!-- 头部 -->
+<header class='yh_header'>
+    <a href="index.html" class="iconfont back_icon fl my_element my_center"></a>
+    <a href="javascript:;">
+        <div class="app_download fr"></div>
+    </a>
+    <h1>优惠券</h1>
+</header>
+<!-- 内容主体 -->
+<section class="content">
+    <div class="content_wrap clearfix">
+
+    </div>
+</section>
+<!-- 底部优惠标题 -->
+<section class="yh_bottom">
+    <div class="bottom_wrap">
+        <a href="index.html">首页</a><span>></span><a href="javascript:;">优惠券</a>
+    </div>
+</section>
+<!-- footer -->
+<section class="footer">
+    <div class="footer_t clearfix">
+        <a href="javascript:;" class="w33 fl">登录</a>
+        <a href="javascript:;" class="w33 fl">注册</a>
+        <a href="javascript:;" class="w33 fl">
+            <img src="img/top.jpg" alt="">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_b">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</section>
+</body>
+</html>

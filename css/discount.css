@@ -1,0 +1,91 @@
+/*头部开始*/
+
+/*内容区开始*/
+.dis_content{
+    background-color: #fff;
+}
+.dis_content .left{
+    height: 265px;
+
+}
+.dis_content .content{
+    height: 265px;
+    width: 50%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.dis_content .content img{
+    height: 140px;
+}
+.dis_content .content .special{
+    height: 42px; /*有高度才可以使用。。。*/
+    color: #000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.row1{
+    -webkit-line-clamp: 1;
+}
+
+.row2{
+    -webkit-line-clamp: 2;
+}
+.special{
+    width: 100%;
+}
+
+.dis_content .orange{
+    color: #FF851F;
+    height: 18px;
+    margin-top: 5px;
+}
+.dis_content .gray{
+    color: #A2A2A2;
+    margin-top: 5px;
+}
+/*底部开始*/
+.dis_footer{
+    margin-top: 36px;
+    border-bottom: 1px solid #ccc;
+}
+.dis_footer .top{
+    height: 32px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.dis_footer .top .public{
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.dis_footer .top .link1,.dis_footer .top .link2{
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.dis_footer .bottom{
+    height: 60px;
+    text-align: center;
+    padding-top:15px;
+    box-sizing: border-box;
+}
+.dis_footer .bottom .color{
+    color: red;
+}
+.dis_footer .bottom .gray{
+    /*color: #EFEFEF;*/
+}
+
+.my_xz::before{
+    height: 15px;
+    width: 15px;
+    content:'';
+    background: url(../img/top_10.png);
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+.dis_footer .top .link3 a{
+    position: relative;
+}

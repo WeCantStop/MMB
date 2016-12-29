@@ -1,0 +1,155 @@
+/*
+* @Author: Admin
+* @Date:   2016-12-03 22:59:14
+* @Last Modified by:   Admin
+* @Last Modified time: 2016-12-04 14:24:03
+*/
+.red{
+	color:red;
+}
+
+/*头部*/
+.MMB_header {
+    height: 50px;
+    background-color: #ff841d;
+}
+
+.MMB_logo {
+    padding: 14px 0 0 14px;
+    box-sizing: border-box;
+}
+
+.MMB_logo a{
+    width: 200px;
+    height: 36px;
+    display: block;
+}
+
+.APP_download {
+    padding: 6px;
+}
+
+.APP_download a{
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+/* 头部栏目 */
+.yh_bottom{
+	margin: 0;
+    background: -webkit-linear-gradient(top,#fff 20%,#E7E7E7 60%,#ccc);
+    position: relative;
+}
+.yh_bottom a,..yh_bottom span{
+	display: inline-block;
+}
+
+
+
+/* 主体 */
+.product_t{
+	position: relative;
+}
+.product_title{
+	text-align: center;
+    font-size: 16px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+.product_img{
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.product_sc{
+	position: absolute;
+	bottom:20px;
+	right:10px;
+}
+.product_sc img{
+	width: 40px;
+	height: 40px;
+}
+.product_list{
+	border-top: 1px solid #CD640A;
+	border-bottom: 1px solid #CD640A;
+}
+.product_list span{
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	border-right: 1px solid #CD640A;
+	height: 40px;
+	background-color: #FFC525;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.product_list span:nth-child(1){
+	background-color: #FF9C1B;
+}
+.product_list span:nth-child(3){
+	border:none;
+}
+.product_b .p_pic{
+	width: 20px;
+	height: 20px;
+}
+
+.product_pj p{
+	background-color: #DBDBDB;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+}
+.comment_item{
+	padding: 5px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.comment_item .comname{
+	padding-left: 5px;
+	width: 40px;
+	line-height: 20px;
+}
+.comment_item .cominfo{
+	padding-right: 5px;
+	width: 100px;
+	height: 40px;
+}
+.comment_item .cominfo span{
+	text-align: right;
+	display: block;
+}
+.comment_b .comcontent{
+	padding: 0 5px;
+}
+
+/* 更多评论 */
+.comment{
+	margin-top: 10px;
+	padding:0 5px;
+}
+.comment_wrap{
+	
+}
+.comment button{
+	width: 100%;
+	background: -webkit-linear-gradient(top,#EFEFEF,#D5D5D5);
+	border-radius: 5px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	outline:none;
+	border-style:none;
+	border-top: 1px solid #BABABA;
+	border-bottom: 1px solid #BABABA;
+}
+
+

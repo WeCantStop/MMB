@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="css/base2.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+    <script src="js/template-native.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+
+</head>
+<body>
+
+<!--头部-->
+<header class='dis_header'>
+    <a href="index.html"><div class="fl  my_element my_arrow my_center container"></div></a>
+    <div class="download fr">
+        <div class='my_element download1'></div>
+    </div>
+    <div class='title'>省钱控-最新优惠</div>
+</header>
+
+<!--商品区域-->
+<section class="discount">
+    <ul class="product">
+    </ul>
+</section>
+
+<!--分页区域-->
+<section class="pagener">
+    <a href="javascript:void(0)" class="btn btn-left fl">上一页</a>
+
+    <select id="select" class="my__center">
+        <option value="0">1/15</option>
+        <option value="1">2/15</option>
+        <option value="2">3/15</option>
+        <option value="3">4/15</option>
+        <option value="4">5/15</option>
+        <option value="5">6/15</option>
+        <option value="6">7/15</option>
+        <option value="7">8/15</option>
+        <option value="8">9/15</option>
+        <option value="9">10/15</option>
+        <option value="10">11/15</option>
+        <option value="11">12/15</option>
+        <option value="12">13/15</option>
+        <option value="13">14/15</option>
+        <option value="14">15/15</option>
+    </select>
+    <a href="javascript:void(0)" class="btn btn-right fr">下一页</a>
+</section>
+
+
+<!--底部-->
+<section class='dis_footer'>
+    <div class="top">
+        <div class="link1 fl w30 public"><a href="#">登录</a></div>
+        <div class="link2 fl w30 public"><a href="#">注册</a></div>
+        <div class="link3 fr w40 public"><a href="#">点击返回顶部</a></div>
+    </div>
+    <div class="bottom">
+        <p class="t"><span class='color'>手机APP下载</span> 慢慢买2手机版<span class='gray'>--掌上比价平台</span></p>
+        <p class="b"><span class='gray'>m.manmanbuy.com</span></p>
+    </div>
+</section>
+
+</body>
+
+
+<script type="text/template" id="pro_items">
+    <% for(var i = 0; i < item.length; i++) { %>
+    <a href="getmoneyctrl.html?id=<%= item[i].productId %>" class="link_a">
+        <li class="pro_item car_icon clearfix">
+            <div class="img_wrap fl">
+                <%=# item[i].productImg2 %>
+            </div>
+            <div class="item_description">
+                <p class='item-title'><%= item[i].productName %>
+                    <span><%= item[i].productPinkage %></span>
+                </p>
+                <div class='clearfix'>
+                    <div class="mall fl"><%= item[i].productFrom %> | <%= item[i].productTime %></div>
+
+                    <div class="msg fr">
+                        <i></i>
+                        <span class="fl"><%= item[i].productComCount %></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </a>
+    <% } %>
+</script>
+<script src='js/moneyctrl.js'></script>
+
+
+</html>

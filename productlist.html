@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>产品列表</title>
+	<link rel="stylesheet" href="css/base1.css">
+	<link rel="stylesheet" href="css/yh_common.css">
+	<link rel="stylesheet" href="css/productlist.css">
+	<script src="js/zepto.min.js"></script>
+	<script src="js/template-native.js"></script>
+	<script type='text/html' id='tpl'>
+		<% for(var i=0;i<data.length;i++){ %>
+			<div class="product_item clearfix my_centerY">
+				<a class="need" href="productinfo.html?productId=<%= data[i].productId %>&comment=<%= data[i].productCom %>#">
+					<div class="pic fl">
+						<%=# data[i].productImg %>
+					</div>
+					<div class="info">
+						<div class="title">
+							<%= data[i].productName %>
+						</div>
+						<div class="price">
+							<%= data[i].productPrice %>
+						</div>
+						<div class="evalute">
+							<span class='quote'><%= data[i].productQuote %></span>
+							<span class='comment'><%= data[i].productCom %></span>
+						</div>
+					</div>
+				</a>	
+			</div> 
+		<%}%>
+	</script>
+	<script src='js/yh_common.js'></script>
+	<script src='js/productlist.js'></script>
+</head>
+<body>
+	<!--头部-->
+    <header class="MMB_header clearfix">
+        <div class="MMB_logo fl">
+            <a href="index.html"><img src="img/header_logo.png"></a>
+        </div>
+        <div class="APP_download fr">
+            <a href="#"><img src="img/header_app.png"></a>
+        </div>
+    </header>
+
+	<!-- 头部栏目 -->
+	<section class="yh_bottom">
+		<div class="bottom_wrap">
+			<a href="index.html">首页</a><span>></span><a href="category.html">全部分类</a><span>></span><a class="header_title" href="javascript:;">电视</a>
+			<a href="javascript:;" class='check'>筛选</a>
+		</div>
+	</section>
+
+	<!-- 产品主体 -->
+	<section class='content'>
+		<div class="content_wrap">
+			<!-- <div class="product_item clearfix my_centerY">
+				<a href="#">
+					<div class="pic fl">
+						<img src="img/Thumb_2016060015515937123.png" alt="">
+					</div>
+					<div class="info">
+						<div class="title">
+							乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+						</div>
+						<div class="price">
+							¥1999.00
+						</div>
+						<div class="evalute">
+							<span class='quote'>报价(6)</span>
+							<span class='comment'>评论(2286)</span>
+						</div>
+					</div>
+				</a>	
+			</div>  -->
+		</div>
+	</section>
+
+
+	<!-- 底部分页 -->
+	<section class="yh_bottom productlist_bottom">
+		<div class="productlist_bottom_wrap">
+			<span class='w33 fl'><a href="javascript:;" class="prev">上一页</a></span>
+			<span class='w33 fl'>
+				<a href="javascript:;">
+					<select class="select">
+						<!-- <option value="1" selected="selected">1/3</option>
+						<option value="2">2/3</option>
+						<option value="3">3/3</option> -->
+					</select>
+				</a>
+			</span>
+			<span class='w33 fl'><a href="javascript:;" class="next">下一页</a></span>
+		</div>
+	</section>
+
+    <!-- footer -->
+	<footer class="footer">
+		<div class="footer_t clearfix">
+			<a href="javascript:;" class="w33 fl">登录</a>
+			<a href="javascript:;" class="w33 fl">注册</a>
+			<a href="#" class="w33 fl">
+				<img src="img/top.jpg" alt="">
+				返回顶部
+			</a>
+		</div>
+		<div class="footer_b">
+			<p>
+				<a href="javascript:;">手机APP下载</a>
+				<a href="javascript:;">慢慢买手机版</a>
+				--- 掌上比价平台
+			</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+</body>
+</html>

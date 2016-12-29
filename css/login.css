@@ -1,0 +1,45 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.content{
+    margin-top: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+#name1,#psw,#btn{
+    width: 80%;
+    height: 35px;
+    margin-bottom: 20px;
+    outline: none;
+}
+#btn{
+    margin-left: 46px;
+}
+
+ .mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.8);
+    position: fixed;
+     z-index: 8888;
+     top: 0;
+     left: 0;
+
+}
+ .mask .txt{
+     width: 75%;
+     height: 200px;
+     background-color: #fff;
+     border-radius: 10px;
+     margin: 200px auto;
+     text-align: center;
+     line-height: 200px;
+ }
+.mask .txt .tip{
+    color: hotpink;
+    letter-spacing: 5px;
+    font-size: 14px;
+}

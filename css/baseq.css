@@ -1,0 +1,221 @@
+/*
+* @Author: lenovo
+* @Date:   2016-11-25 00:36:41
+* @Last Modified by:   lenovo
+* @Last Modified time: 2016-11-25 00:36:41
+*/
+@charset "utf-8";
+
+/* ����iPhone��Safari���ֺ��Զ����� */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /* ���IOSĬ�ϻ����ܿ������ */
+    -webkit-overflow-scrolling : touch;
+}
+
+/* ��ֹ���ű� */
+input[type="submit"], input[type="reset"], input[type="button"], input {
+    resize: none;
+    border: none;
+}
+
+/* ȡ�����Ӹ���  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* ����HTML5Ԫ��Ϊ�� */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* ͼƬ����Ӧ */
+img {
+    width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    display: block;
+    -ms-interpolation-mode: bicubic;/*Ϊ���չ�ieͼƬ����ʧ��*/
+}
+
+/* ��ʼ�� */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 'Microsoft YaHei','����', Tahoma, Arial, sans-serif;
+    color: #555;
+    background-color: #F7F7F7;
+}
+em, i {
+    font-style: normal;
+}
+ul,li{
+    list-style-type: none;
+}
+strong {
+    font-weight: normal;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+    color: #969696;
+    font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-family: 'Microsoft YaHei';
+}
+img {
+    border: none;
+}
+input{
+    font-family: 'Microsoft YaHei';
+}
+.w50{
+    width: 50%;
+}
+.w25{
+    width: 25%;
+}
+.w20{
+    width: 20%;
+}
+.w30{
+    width: 30%;
+}
+.w33{
+    width: 33.333333%;
+}
+
+.w40 {
+    width: 40%;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.db{
+    display: block !important;
+}
+.dn{
+    display: none;
+}
+/*�������*/
+.one_txt_cut{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*������� �ֻ���ʹ��*/
+.txt_cut{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 2;����д�߶� */
+    -webkit-box-orient: vertical;
+}
+  /*���αԪ��*/
+.my_element::before{
+    content: '';
+    background:  url(../images/icons/jd-sprites.png) 0 0 no-repeat;
+    -webkit-background-size: 200px 200px;
+    background-size: 200px 200px;
+}
+
+/*���ݴ�ֱˮƽ����*/
+.my__center, .my_center::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*���ݴ�ֱ����*/
+.my__centerY,.my_centerY::before{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*�ұߵ���*/
+.right_line{
+    position: relative;
+}
+.right_line::after{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+   position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+/*���ŵ���*/
+.top_line{
+    position: relative;
+}
+.top_line::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+/*�����С�ľ���*/
+html,body{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+
+}
+/*�������ֲ���ʽ*/
+.transitionAll{
+    transition: all 300ms;
+}
+
+/*��������*/
+.mt_46{
+    margin-top: 46px;
+}
+/*���ѡ��*/
+.check input{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+.my_round::before{
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    background-position: -180px -90px;
+}
+/*���һ���������л���ѡ�ı���ͼ*/
+.checked::before{
+    background-position: -180px -70px;
+}
+

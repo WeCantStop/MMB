@@ -1,0 +1,130 @@
+/*
+* @Author: xin87
+* @Date:   2016-11-28 17:43:18
+* @Last Modified by:   Admin
+* @Last Modified time: 2016-12-03 10:53:19
+*/
+
+/* iconfont */
+@font-face {
+	font-family: "iconfont";
+	src:
+		url(../font/yh/iconfont.eot) format('embedded-opentype'),
+		url(../font/yh/iconfont.svg) format('svg'),
+		url(../font/yh/iconfont.ttf) format('truetype'),
+		url(../font/yh/iconfont.woff) format('woff');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+}
+
+.back_icon:before { 
+	content: "\e697";
+	color: #fff;
+	font-size: 30px;
+}
+
+html,body{
+	background-color: #fff;
+}
+
+/* 头部 */
+.yh_header{
+	background-color: #f4483e;
+	position: relative;
+}
+.yh_header .back_icon{
+	width: 52px;
+	height: 46px;
+	position: relative;
+}
+.app_download{
+	width: 46px;
+	height: 46px;
+	background: url(../img/header_app.png) 10px 6px no-repeat;
+	-webkit-background-size: 30px;
+	background-size: 30px;
+}
+.yh_header h1{
+	line-height: 46px;
+	height: 46px;
+	text-align: center;
+	color: #fff;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* 底部标题 */
+.yh_bottom{
+	height: 37px;
+	line-height: 37px;
+	padding-left:10px;
+	margin-top: 15px;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ccc;
+	background: -webkit-linear-gradient(top,#fff 20%,#f3f3f3 60%,#efefef);
+}
+
+.bottom_wrap a{
+	color: #000;
+	font-size: 12px;
+}
+.bottom_wrap span{
+	font-size: 16px;
+	padding: 0 5px;
+}
+
+
+/* footer */
+
+.footer{
+	margin-top: 25px;
+	background-color: #efefef;
+}
+.footer_t{
+	border-top: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+}
+.footer .footer_t a{
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #000;
+	display:block;
+	position: relative;
+	text-align: center;
+}
+.footer .footer_t a:nth-child(2){
+	border-left: 1px solid #c4c4c4;
+	border-right: 1px solid #c4c4c4;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.footer .footer_t a img{
+	position: absolute;
+	left: 13px;
+	top: 9px;
+	width: 15px;
+	height: 15px;
+}
+
+.footer_b{
+	padding-top: 15px;
+	height: 56px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.footer_b p{
+	line-height: 14px;
+	text-align: center;
+	font-size: 12px;
+}
+.footer_b p:nth-child(1) a{
+	color: red;
+}
+.footer_b p:nth-child(1) a:last-child{
+	color: #000;
+}

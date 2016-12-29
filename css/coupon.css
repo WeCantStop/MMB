@@ -1,0 +1,33 @@
+/*
+* @Author: xin87
+* @Date:   2016-11-25 14:36:15
+* @Last Modified by:   xin87
+* @Last Modified time: 2016-11-28 17:48:29
+*/
+
+
+/* 产品展示 */
+.content{
+	padding-bottom: 30px;
+}
+.content_wrap{
+	padding-left: 10px;
+}
+.product_item{
+	margin-right: 5%;
+	margin-top: 10px;
+	height: 90px;
+	border: 1px solid #eee;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 10px 5px 0;
+	position: relative;
+}
+.product_item a{
+	color: red;
+}
+.product_item a img{
+	max-height: 50px;
+    width: 50px;
+}

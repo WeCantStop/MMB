@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <title></title>
+</head>
+<body>
+<!--登录头部开始-->
+<header class='dis_header'>
+    <div class="fl  my_element my_arrow my_centerY container"></div>
+    <div class="download fr">
+        <div class='my_element download1'></div>
+    </div>
+    <div class='title'>登 录</div>
+</header>
+
+<section class="content">
+用户名：<input type="text" name='username' id='name1'/><br>
+密 码 ：&nbsp;<input type="password" name='password' id='psw'/><br>
+<button id='btn'>登录</button><br>
+</section>
+<div class="mask dn">
+    <div class="txt animated bounce">
+        <p class='tip'></p>
+    </div>
+</div>
+<script>
+    //慎用name
+    var name1=document.getElementById('name1');
+    var psw=document.getElementById('psw');
+    var btn=document.getElementById('btn');
+   var tip=document.querySelector('.tip');
+   var mask=document.querySelector('.mask');
+
+    btn.onclick=function(){
+        if(name1.value=='尼古拉斯赵四'&&psw.value=='250'){
+            tip.innerHTML='登录成功,页面即将返回';
+            mask.style.display='block';
+           setTimeout(function(){
+                history.go(-1)//这是往回走
+            },1500)
+
+        }else{
+            mask.style.display='block';
+            tip.innerHTML='用户名或者密码不正确，请您重新登录'
+            setTimeout(function(){
+                mask.style.display='none';
+            },1500)
+        }
+
+    }
+
+</script>
+</body>
+</html>

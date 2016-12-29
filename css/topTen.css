@@ -1,0 +1,38 @@
+/*<!--内容部分-->*/
+
+.all .product_nav{
+
+
+}
+.all .product_nav ul{
+    border: 1px solid #cccccc;
+}
+.all .product_nav li{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 15px;
+    border-bottom: 1px solid #cccccc;
+    background-color: #eeeeee;
+    color: #000;
+}
+
+
+.product_nav li a{
+    font-weight: 700;
+}
+
+
+
+.all .mid-list{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 15px;
+    border: 1px solid #cccccc;
+    margin:10px 0px;
+    background-color: #eeeeee;
+    font-size: 16px;
+    color: #874604;
+}
+
+
+

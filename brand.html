@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 让IE用最新的内核去渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口标签 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>慢慢买</title>
+    <!-- Bootstrap -->
+    <!-- bootstrap的核心css文件 -->
+
+
+    <link rel="stylesheet" href="css/commenQ.css">
+    <link rel="stylesheet" href="css/baseq.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/zepto.min.js"></script>
+    <script src="js/template-native.js"></script>
+</head>
+<body>
+<div class="all">
+<!--通用头部区域-->
+
+    <!--通用头部区域-->
+
+    <div class="top_header">
+        <div class="left fl"></div>
+        <div class="right fr"></div>
+    </div>
+    <div class="btm_header">
+        <div class="r-button fr ">
+            <input class="button my__centerY " type="button" value="搜索">
+        </div>
+        <div class="l-select ">
+            <input class="select  " type="text" placeholder="请输入你想比价的商品">
+        </div>
+    </div>
+    <div class="pathname">
+        <span><a href="index.html">首页></a> </span> <span><a href="brandTitle.html">全部分类 ></a></span><span id="get_url"></span>
+    </div>
+
+    <div class="mid-list">
+        <p><span id="get_urltwo"></span>哪个牌子好</p>
+    </div>
+
+    <!--内容部分-->
+    <section class="product_nav">
+        <ul class="product_tv clearfix" >
+
+
+        </ul>
+    </section>
+
+
+    <!--底部-->
+    <section class='dis_footer'>
+        <div class="top">
+            <div class="link1 fl w30 public"><a href="#">登录</a></div>
+            <div class="link2 fl w30 public"><a href="#">注册</a></div>
+            <div class="link3 fr w40 public"><a href="#">点击返回顶部</a></div>
+        </div>
+        <div class="bottom">
+            <p class="t"><span class='color'>手机APP下载</span> 慢慢买2手机版<span class='gray'>--掌上比价平台</span></p>
+            <p class="b"><span class='gray'>m.manmanbuy.com</span></p>
+        </div>
+    </section>
+</div>
+
+<script type="text/template" id="tele">
+
+    <% for (var i = 0; i < array.length; i++) {  %>
+    <a class='need' href="product.html?id=<%= array[i].brandTitleId %>&id2=<%= array[i].brandName%>">
+        <li>
+            <p><%= array[i].brandName%></p>
+            <span><%= array[i].brandInfo  %></span>
+            <span><%= (i)+1%></span>
+            <i></i>
+        </li>
+    </a>
+    <%  } %>
+
+</script>
+
+<script>
+    //先获取去gai送来的值
+
+    var changeHref;
+    function getWay(location){
+        var arr=location.split(':');
+        return arr[1];
+    }
+    if(getWay(location.href)=='//localhost'){
+        changeHref='192.168.50.130:8002';
+    }else{
+        changeHref='mmb.ittun.com';
+    }
+
+    function getUrl(url){
+        var obj={};
+        //var url=location.search;
+        var string=url.split('?')[1];
+        console.log(string.split('&'));
+        string.split('&').forEach(function(ele){
+            //结果是一个个的  中间是什么符号就用什么符号给分割开
+            var b=ele.split('=');
+            var k1 =b[0];
+            var v1 = b[1];
+            if(v1){
+                obj[k1]=v1;
+            }else{
+                obj[k1]="";
+            }
+        })
+        return obj;
+
+    }
+
+    var id=getUrl(location.href).id;
+    id=id.split('#');
+
+    var id2=getUrl(decodeURI(location.href)).id2;
+
+//    console.log(getUrl(location.href));
+
+    var four =id2.split('十大品牌')[0]
+    console.log(four);
+    var get_url = document.getElementById("get_url");
+        var get_urltwo = document.getElementById("get_urltwo");
+        get_url.innerHTML= id2;
+        get_urltwo.innerHTML= four;
+
+    $.ajax({
+        type: 'get',
+        url:'http://'+changeHref+'/api/getbrand?brandtitleid='+id,
+        success:function(data){
+            var tmpl = template('tele',{array:data.result});
+            $('.product_tv').append(tmpl);
+            $('.product_tv li').eq(0).children('span').eq(1).css('backgroundColor','red');
+            $('.product_tv li').eq(1).children('span').eq(1).css('backgroundColor','#ff9314');
+            $('.product_tv li').eq(2).children('span').eq(1).css('backgroundColor','#8adf5b');
+
+
+            //截取我想要的字符串
+//            console.log(id2);
+            var need=document.querySelectorAll('.need');
+            for(var i=0;i<need.length;i++){
+                need[i].href+='#'+id2;
+            }
+//            console.log(need);
+        }
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
